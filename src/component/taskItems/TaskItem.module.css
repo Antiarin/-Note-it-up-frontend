@@ -1,0 +1,95 @@
+.card {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(161, 146, 146);
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+  width: 65%;
+}
+.buttons {
+  width: 30%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.delete,
+.complete {
+  width: fit-content;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid black;
+  background: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  gap: 5px;
+  font-size: 15px;
+}
+.complete {
+  color: white;
+  border: 2px solid white;
+  background: black;
+  visibility: visibile;
+}
+.complete.hide {
+  visibility: hidden;
+}
+.minus {
+  font-size: 20px;
+  font-weight: 1000;
+  color: black;
+  background: white;
+  border: none !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.complete:hover,
+.complete:active {
+  background: white;
+  color: black;
+  border: 3px solid black;
+}
+.delete:hover,
+.delete:active,
+.delete:hover > .minus,
+.delete:active > .minus {
+  color: white;
+  border: 2px solid white;
+  background: black;
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text {
+    width: 100%;
+  }
+  .buttons {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  .complete,
+  .delete {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .buttons {
+    flex-direction: column;
+  }
+}

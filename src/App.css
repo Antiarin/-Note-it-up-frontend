@@ -1,0 +1,21 @@
+h1 {
+ font-weight: 1000;
+  font-size: clamp(30px, 6.654vw + 0.01em, 120px) !important;
+  line-height: 3ems;
+}
+h2{
+    font-size:clamp(25px, 3.385vw + 0.01em, 65px);
+    font-weight:600;
+    line-height:2rem;
+  
+  }
+h3 {
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw + 0.01em, 40px);
+  line-height: 2rem;
+}
+
+p {
+  font-size: clamp(15px, 1.563vw+ 0.01em, 30px);
+  line-height: 2rem;
+}
