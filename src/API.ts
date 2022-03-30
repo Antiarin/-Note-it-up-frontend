@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
-const baseUrl: string = 'http://localhost:4000'
+const baseUrl: string = 'https://note-it-up-backend.herokuapp.com'
 
 export const getTasks = async (status=""): Promise<AxiosResponse<ApiDataType>> => {
   try {

@@ -19,3 +19,8 @@ p {
   font-size: clamp(15px, 1.563vw+ 0.01em, 30px);
   line-height: 2rem;
 }
+
+.line-through {
+  text-decoration: line-through;
+  color: #777 !important;
+}

@@ -8,15 +8,17 @@ type Props = TodoProps & {
 }
 
 const TaskItem = ({ todo, updateTask, deleteTask }: Props) => {
+    const checkTodo: string = todo.status ? `line-through` : ''
     return (
         <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y:30 }}
             animate={{ opacity: 1 }}
+            whileInView={{opacity:1,y:0}}
             exit={{ opacity: 0 }}
             className={styles.card}>
             <div className={styles.text}>
-                <h3>{todo.name}</h3>
-                <p>{todo.description}</p>
+                <h3 className={checkTodo}>{todo.name}</h3>
+                <p className={checkTodo}>{todo.description}</p>
             </div>
             <div className={styles.buttons}>
                 <button type="button" onClick={() => updateTask(todo)} className={`${todo.status ? styles.hide : ""} ${styles.complete}`} >Complete</button>

@@ -24,7 +24,7 @@ const AddTask = ({ saveTask }: Props) => {
                     <label className={styles.label}htmlFor='name'>Description</label>
                     <input onChange={handleForm} type="text" className={styles.input} name="description" placeholder="add task description" />
                 </div>
-                <button type="submit" className={styles.button} > <span className={styles.plus}>+</span> Add</button>
+                <button type="submit" className={styles.button} disabled={formData === undefined ? true: false} > <span className={styles.plus}>+</span> Add</button>
 
             </form>
 
